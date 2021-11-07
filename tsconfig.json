@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "rootDir": "src/ts",
+    "outDir": "src/js",
+    "target": "es6",
+    "module": "es2015",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
