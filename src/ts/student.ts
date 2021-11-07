@@ -1,7 +1,7 @@
 // TODO: Fixing of extension problem.
 import { Person } from "./person.js";
 
-class Student extends Person {
+export class Student extends Person {
   university: string;
 
   constructor(ad: string, soyad: string, yash: number, uni: string) {
