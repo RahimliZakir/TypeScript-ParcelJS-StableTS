@@ -117,125 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"src/js/person.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Person = void 0;
-
-var Person =
-/** @class */
-function () {
-  function Person(name, surname, age) {
-    this.name = name;
-    this.surname = surname;
-    this.age = age;
-  }
-
-  return Person;
-}();
-
-exports.Person = Person;
-},{}],"src/js/student.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Student = void 0;
-
-var _person = require("./person.js");
-
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
-      __proto__: []
-    } instanceof Array && function (d, b) {
-      d.__proto__ = b;
-    } || function (d, b) {
-      for (var p in b) {
-        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
-      }
-    };
-
-    return _extendStatics(d, b);
-  };
-
-  return function (d, b) {
-    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-
-    _extendStatics(d, b);
-
-    function __() {
-      this.constructor = d;
-    }
-
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-  };
-}(); // TODO: Fixing of extension problem.
-
-
-var Student =
-/** @class */
-function (_super) {
-  __extends(Student, _super);
-
-  function Student(ad, soyad, yash, uni) {
-    var _this = _super.call(this, ad, soyad, yash) || this;
-
-    _this.university = uni;
-    return _this;
-  }
-
-  return Student;
-}(_person.Person);
-
-exports.Student = Student;
-var student = new Student("Ali", "Aliyev", 27, "ASOIU");
-console.log(student);
-},{"./person.js":"src/js/person.js"}],"src/js/func.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Sum = Sum;
-
-function Sum(arg1, arg2) {
-  return arg1 + arg2;
-}
-
-console.log(Sum(3, 4));
-},{}],"src/js/iprinter.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-},{}],"src/js/printer.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Printer = void 0;
-
-var Printer =
-/** @class */
-function () {
-  function Printer() {}
-
-  Printer.prototype.print = function () {
-    console.log("Check printed!");
-  };
-
-  return Printer;
-}();
-
-exports.Printer = Printer;
-},{}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -307,21 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/js/main.js":[function(require,module,exports) {
-"use strict";
-
-var _person = require("./person");
-
-var _student = require("./student");
-
-var _func = require("./func");
-
-require("./iprinter");
-
-var _printer = require("./printer");
-
-require("../css/style.min.css");
-},{"./person":"src/js/person.js","./student":"src/js/student.js","./func":"src/js/func.js","./iprinter":"src/js/iprinter.js","./printer":"src/js/printer.js","../css/style.min.css":"src/css/style.min.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -525,5 +393,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/js/main.js"], null)
-//# sourceMappingURL=/main.c48f6146.js.map
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/style.min.7e05c03c.js.map
