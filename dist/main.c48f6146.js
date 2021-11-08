@@ -125,15 +125,17 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Person = void 0;
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var Person =
+/** @class */
+function () {
+  function Person(name, surname, age) {
+    this.name = name;
+    this.surname = surname;
+    this.age = age;
+  }
 
-var Person = function Person(name, surname, age) {
-  _classCallCheck(this, Person);
-
-  this.name = name;
-  this.surname = surname;
-  this.age = age;
-};
+  return Person;
+}();
 
 exports.Person = Person;
 },{}],"src/js/student.js":[function(require,module,exports) {
@@ -146,35 +148,43 @@ exports.Student = void 0;
 
 var _person = require("./person.js");
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+var __extends = void 0 && (void 0).__extends || function () {
+  var _extendStatics = function extendStatics(d, b) {
+    _extendStatics = Object.setPrototypeOf || {
+      __proto__: []
+    } instanceof Array && function (d, b) {
+      d.__proto__ = b;
+    } || function (d, b) {
+      for (var p in b) {
+        if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+      }
+    };
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+    return _extendStatics(d, b);
+  };
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+  return function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
 
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+    _extendStatics(d, b);
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+    function __() {
+      this.constructor = d;
+    }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+}(); // TODO: Fixing of extension problem.
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var Student = /*#__PURE__*/function (_Person) {
-  _inherits(Student, _Person);
-
-  var _super = _createSuper(Student);
+var Student =
+/** @class */
+function (_super) {
+  __extends(Student, _super);
 
   function Student(ad, soyad, yash, uni) {
-    var _this;
+    var _this = _super.call(this, ad, soyad, yash) || this;
 
-    _classCallCheck(this, Student);
-
-    _this = _super.call(this, ad, soyad, yash);
     _this.university = uni;
     return _this;
   }
@@ -212,23 +222,14 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Printer = void 0;
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var Printer =
+/** @class */
+function () {
+  function Printer() {}
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-var Printer = /*#__PURE__*/function () {
-  function Printer() {
-    _classCallCheck(this, Printer);
-  }
-
-  _createClass(Printer, [{
-    key: "print",
-    value: function print() {
-      console.log("Check printed!");
-    }
-  }]);
+  Printer.prototype.print = function () {
+    console.log("Check printed!");
+  };
 
   return Printer;
 }();
@@ -274,7 +275,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62562" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60594" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
