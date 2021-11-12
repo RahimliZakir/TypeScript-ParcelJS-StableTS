@@ -4,5 +4,5 @@ import { Sum } from "./func";
 import {} from "./iprinter";
 import { Printer } from "./printer";
 
-//* Style Files
+//* Style File(s)
 import "../css/style.min.css";
